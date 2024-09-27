@@ -1,0 +1,239 @@
+/*Formatting for Gallery20XX.html*/
+
+body {
+    margin-top:7rem;
+    overflow-x: hidden; /*removes the scroll bar on the x axis (that appeared due to horizontally oversized image)*/
+    font-family: raleway, sans-serif;
+    background-color: rgb(245, 245, 245);
+}    
+/*header {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 1rem;  /*!!!for a very weird reason this is 1rem too long compared to the header of the ABOUT page unless i set this here*/
+/*}
+footer {
+    margin-right: -0.5rem;  /*!!!for a very weird reason the footer is too narrow compared to the header unless i set this here*/
+/*}*/
+
+/* INDIVIDUAL PIC DISPLAY START*/ 
+/* Partially referenced from https://codepen.io/ongtiffany/pen/BoOeQV */
+
+    /* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+    .darkback {
+        position: fixed;
+        top: -100%;    /*hiding it up above the screen before it gets triggered*/
+        background: rgba(0,0,0,0);
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        z-index: 1;
+        transition: opacity 0.8s ease-in-out;
+        overflow: hidden;
+    }
+
+    .lightbox-target {
+    display: flex; /*so that the left text + image + closing icon can be flexibly displayed next to each other*/
+    position: fixed;
+    top: -100%;    /*hiding it up above the screen before it gets triggered*/
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    background: rgba(0,0,0,.9);
+    opacity: 0.8;
+    transition: opacity 0.8s ease-in-out;
+    overflow: hidden;
+    }
+    
+    /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+    .lightbox-target .lefttext {
+        z-index: 2;         
+        width: 25%;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        font-size:0.9rem;
+        text-align: start;
+        color:white;
+        transition: 0.18s ease-in-out;  
+    } 
+    .lightbox-target .lefttext h3 {
+        color:white;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+    }
+    .lightbox-target .lefttext p {
+        font-weight: 300;
+    }   
+    .lightbox-target .lefttext .copyright {
+        font-size: 0.8rem;
+        padding-top: 2rem;
+    }    
+    .lightbox-target .pic {
+    z-index: 2;
+    max-height:95%; /*to have some background above and below the pic*/
+    height: auto;   /*but make it be only as high as the photo is, so a landscape will naturally be shorter*/
+    margin-right: 3rem; /*to keep distance from the closing icon*/
+    margin-top:1rem;
+    }
+    .lightbox-target .pic img {  
+        max-height: 100%; /*maximum 100% of its container box*/
+        max-width: 100%;
+        border: 15px solid white; /*finally adding the border directly to the img, so it flexibly adjusts around it*/
+        box-sizing: border-box;
+    }
+
+    /* Styles the close link, adds the slide down transition */
+    
+    a.lightbox-close {
+    z-index: 2;                    
+    display: block;
+    width:2rem;
+    height:2rem;
+    box-sizing: border-box;
+    background: white;
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    position: absolute;
+    top: -80px;
+    right: 1rem;
+    transition: 0.5s ease-in-out;
+    }
+
+    /* Drawing an "X" by rotating 2 divs that overlap each other*/
+    /* Provides part of the "X" to eliminate an image from the close link */
+    
+    a.lightbox-close:before {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: white;
+    position: absolute;
+    left: 26px;
+    top:10px;
+    transform:rotate(45deg);
+    }
+    
+    /* Provides part of the "X" to eliminate an image from the close link */
+    
+    a.lightbox-close:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: white;
+    position: absolute;
+    left: 26px;
+    top:10px;
+    transform:rotate(-45deg);
+    }
+    
+    /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+    
+    .lightbox-target:target {       /*pulls the container into the viewport*/
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+        overflow:scroll;
+    }
+    .lightbox-target:target img {   /*if this is not defined, the image gets distorted and overflows*/
+        width: 100%;
+    }
+    .lightbox-target:target a.lightbox-close {  /*pulls the container into the viewport*/
+        top: 0;
+    }
+/* INDIVIDUAL PIC DISPLAY END*/ 
+
+/* GALLERY FOR ALL PICs START*/ 
+    h1 {
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left:3rem;
+        margin-right:3rem;
+        font-size: 1.3rem;
+        font-weight: 300;
+        color:rgba(0, 0, 0, 70%);
+        text-transform: uppercase;
+        display: block; 
+    }
+    .gallery {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        object-fit: cover;
+        margin-bottom: 2rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        
+        }  
+    .lightbox {        /*centers its content (needed for images with different shape than its container*/
+      display: block;  
+      margin:auto;
+    } 
+    img {
+        max-width: 100%;
+        margin-bottom:1rem;
+    }
+    h3 {
+        font-size:0.9rem;
+        text-align: start;
+        text-justify: center;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color:rgba(0, 0, 0, 70%);
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-bottom: 1rem;
+    }
+    a {
+        text-decoration: none;
+    }
+    
+/* GALLERY FOR ALL PICs END*/ 
+
+/*Responsive layout for middle-small screens*/
+@media screen and (max-width: 900px) {
+    .w-menu.responsive .dropdown {  /*this part of the header menu is set for every page to highlight which menu-point is displayed on current page*/
+        font-weight: 550;
+        color: white;
+    }
+    h1 {
+        padding-top:0rem;
+    }
+    .gallery {
+        display:grid;
+        grid-template-columns: 1fr 1fr; /*changes the gallery to display 2 pics in a row*/
+    }
+    .lightbox-target {       /*change the individual pic layout to img above - text below*/
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .lightbox-target .lefttext {
+        width: 100%;
+    }
+    .lightbox-target .pic {  /*priorizes the pic box as first with the minus order*/
+        order: -1;
+        margin-left: 1rem;
+    }
+    footer {
+        margin-right: 1.5rem;  /*!!!for a very weird reason the footer is too long compared to the header unless i set this here*/
+    }
+}
+/*Responsive layout for small screens*/
+@media screen and (max-width: 600px) {
+    .gallery {
+        display:grid;
+        grid-template-columns: 1fr;  /*changes the gallery to display 1 pic in a row*/
+    }
+    h1 {
+        margin-bottom:1.5rem;  /*reducing some white space*/
+    }
+    header {
+        padding-bottom:1rem;
+    }
+}

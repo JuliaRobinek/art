@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+        <!--Facebook SEO (markup)-->
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Per Anders New Works" />
+        <meta property="og:image" content="https://lamp3.sdu.dk/~jurob23/webproduction/WebSite-WebCommWebProd-2023WinterExam-JRobinek/Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-TwoSides-2023.JPG"/>
+        <meta property="og:description" content="Such a refreshing breeze in the world of arts with the body of work for the celebration of summer and light." />
+        <meta property="og:url" content="https://lamp3.sdu.dk/~jurob23/webproduction/WebSite-WebCommWebProd-2023WinterExam-JRobinek/index.html" />        
+        <meta property="og:site_name" content="Fine Art" />
+
+	    <!-- Twitter SEO (markup)-->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@peranders">
+        <meta name="twitter:creator" content="@PerAnders">
+        <meta name="twitter:title" content="Per Anders New Works">
+        <meta name="twitter:description" content="Such a refreshing breeze in the world of arts with the body of work for the celebration of summer and light.">
+        <meta name="twitter:image" content="https://lamp3.sdu.dk/~jurob23/webproduction/WebSite-WebCommWebProd-2023WinterExam-JRobinek/Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-TwoSides-2023.JPG">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<title>2023 | Per Anders</title>
+        <link rel="icon" type="image/x-icon" href="Logos-WebCommWebProd-2023WinterExam-JRobinek/AEblack-toUse.svg">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap" rel="stylesheet" />
+
+		<!-- MAYBE REPLACE WITH INDEX.CSS? <link rel="stylesheet" href="WebCommWebProd-2023WinterExam-JRobinek-TEMPLATE.css"> -->
+        <link rel="stylesheet" href="Gallery.css">
+		<!-- CHECK ON CHAT GPT HOW TO DO IT VIA JAVASCRIPT <link rel="stylesheet" href="ActiveMenuHighlight2023.css">  -->
+	</head>
+
+    <body class="IndexContent">
+
+        <div id="menu"></div> <!-- Placeholder for the menu -->
+        <script src="menu-script.js"></script> <!-- JavaScript file that loads the menu -->
+
+        <h1>paintings 2023</h1>
+        <div class="gallery">     <!--Start of grid gallery-->
+                <a class="lightbox" href="#dog1">   <!--executes the container with id "dog1" when clicked on this anchor-->
+                    <img src="WebImages/IMG_6773.jpg" alt="Per Anders painting titled Two sides from 2023" title="Per Anders painting titled Two sides from 2023">
+                    <h3>Two sides, 2023</h3>
+                </a>           
+                <a class="lightbox" href="#dog2">   <!--smaller sized images are displayed for this tumbnail view-->
+                    <img src="WebImages/IMG_6774.jpg" alt="Per Anders fine art painting titled Clouds from 2023" title="Per Anders fine art painting titled Clouds from 2023">
+                    <h3>Cloudes, 2023</h3>
+                </a>           
+                <a class="lightbox" href="#dog3">
+                    <img src="WebImages/IMG_6775.jpg" alt="Per Anders fine art painting titled Marine Blue from 2023" title="Per Anders fine art painting titled Marine Blue from 2023">
+                    <h3>Marine Blue, 2023</h3>
+                </a>
+                <a class="lightbox" href="#dog4">
+                    <img src="WebImages/IMG_6776.jpg" alt="Per Anders fine art painting titled Maybe So from 2023" title="Per Anders fine art painting titled Maybe So from 2023">
+                    <h3>Maybe So, 2023</h3>
+                </a>            
+                <a class="lightbox" href="#dog5">
+                    <img src="WebImages/IMG_6777.jpg" alt="Per Anders fine art painting titled The Start from 2023" title="Per Anders fine art painting titled The Start from 2023">
+                    <h3>The start, 2023</h3>
+                </a>            
+                <a class="lightbox" href="#dog6">
+                    <img src="WebImages/IMG_6778.jpg" alt="Per Anders fine art painting titled Afternoon from 2023" title="Per Anders fine art painting titled Afternoon from 2023">
+                    <h3>Afternoon, 2023</h3>
+                </a>           
+                <a class="lightbox" href="#dog7">
+                    <img src="WebImages/IMG_6779.jpg" alt="Per Anders fine art painting titled title Bay from 2023" title="Per Anders fine art painting titled Bay from 2023">
+                    <h3>Bay, 2023</h3>
+                </a>            
+                <a class="lightbox" href="#dog8">
+                    <img src="WebImages/IMG_6780.jpg" alt="Per Anders fine art painting titled Blue Zone from 2023" title="Per Anders fine art painting titled Blue Zone from 2023">
+                    <h3>Blue Zone, 2023</h3>
+                </a>            
+        </div>     <!--End of grid gallery-->
+
+        <!--Individual display of each picture when clicked in the gallery-->
+        <div class="darkback"></div>
+        <div class="lightbox-target" id="dog1"> <!--gets executed when clicked on referred anchor (with href=#dog1)-->
+            <div class="lefttext">
+                <h3 id="dog1h">Two sides, 2023</h3> <!--when the lightbox-close class is clicked, we jump back to this point on the screen-->
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 40 x 40 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic"> <!--switches to the smaller sized images on small screen-->
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-TwoSides-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-TwoSides-2023-30percent.jpg" alt="Per Anders painting titled Two sides from 2023" title="Per Anders painting titled Two sides from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog1h"></a>   <!-- href="" links to the element that has this id, this is where we jump back after executing the lightbox-close element  -->
+        </div>
+        <div class="lightbox-target" id="dog2">
+            <div class="lefttext">
+                <h3 id="dog2h">Cloudes, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 40 x 40 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-Clouds-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-Clouds-2023-30percent.jpg" alt="Per Anders fine art painting titled Clouds from 2023" title="Per Anders fine art painting titled Clouds from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog2h"></a>
+        </div>
+        <div class="lightbox-target" id="dog3">
+            <div class="lefttext">
+                <h3 id="dog3h">Marine Blue, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 40 x 40 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MarineBlue-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MarineBlue-2023-30percent.jpg" alt="Per Anders fine art painting titled Marine Blue from 2023" title="Per Anders fine art painting titled Marine Blue from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog3h"></a>
+        </div>
+        <div class="lightbox-target" id="dog4">
+            <div class="lefttext">
+                <h3 id="dog4h">Maybe So, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 40 x 40 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MaybeSo-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MaybeSo-2023-30percent.jpg" alt="Per Anders fine art painting titled Maybe So from 2023" title="Per Anders fine art painting titled Maybe So from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog4h"></a>
+        </div>
+        <div class="lightbox-target" id="dog5">
+            <div class="lefttext">
+                <h3 id="dog5h">The Start, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 40 x 60 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-TheStart-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-TheStart-2023-30percent.jpg" alt="Per Anders fine art painting titled The Start from 2023" title="Per Anders fine art painting titled The Start from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog5h"></a>
+        </div>
+        <div class="lightbox-target" id="dog6">
+            <div class="lefttext">
+                <h3 id="dog6h">Afternoon, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 50 x 50 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Afternoon-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Afternoon-2023-30percent.jpg" alt="Per Anders fine art painting titled Afternoon from 2023" title="Per Anders fine art painting titled Afternoon from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog6h"></a>
+        </div>
+        <div class="lightbox-target" id="dog7">
+            <div class="lefttext">
+                <h3 id="dog7h">Bay, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 50 x 40 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Bay-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Bay-2023-30percent.jpg" alt="Per Anders fine art painting titled Bay from 2023" title="Per Anders fine art painting titled title Bay from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog7h"></a>
+        </div>
+        <div class="lightbox-target" id="dog8">
+            <div class="lefttext">
+                <h3 id="dog8h">Blue Zone, 2023</h3>
+                <p>Oil on Canvas</p>
+                <p>Canvas Dimensions: 60 x 60 cm</p>
+                <br>
+                <p class="copyright">Copyright &copy; Per Anders</p>
+            </div>
+            <picture class="pic">
+                <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-15percent.jpg" media="(max-width: 600px)">
+                <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-30percent.jpg" alt="Per Anders fine art painting titled Blue Zone from 2023" title="Per Anders fine art painting titled Blue Zone from 2023"/>
+            </picture>
+            <a class="lightbox-close" href="#dog8h"></a>
+        </div>
+    
+        <div id="footer"></div> <!-- Placeholder for the menu -->
+        <script src="footer-script.js"></script> <!-- JavaScript file that loads the menu -->
+    
+    </body>
+
+
+<!--SEO Schema rich snippet-->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["ItemList", "CreativeWork"],
+        "name": "Selected paintings from 2023",
+        "author": "Per Anders",
+        "about": {
+          "@type": "Painting",
+          "creator": "Per Anders"
+        },
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "numberOfItems": 8,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "Painting",
+              "name": "Blue Zone",
+              "size": "60x60cm",
+              "creator": "Per Anders"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "Painting",
+              "name": "Bay",
+              "size": "50x40cm",
+              "creator": "Per Anders"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Painting",
+              "name": "Afternoon",
+              "size": "50x50cm",
+              "creator": "Per Anders"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Painting",
+              "name": "The Start",
+              "size": "40x60cm",
+              "creator": "Per Anders"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Painting",
+              "name": "Maybe So",
+              "size": "40x40cm",
+              "creator": "Per Anders"
+            }
+          },
+      {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Painting",
+            "name": "Marine Blue",
+            "size": "40x40cm",
+            "creator": "Per Anders"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Painting",
+            "name": "Cloudes",
+            "size": "40x40cm",
+            "creator": "Per Anders"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Painting",
+            "name": "Two Sides",
+            "size": "40x40cm",
+            "creator": "Per Anders"
+          }
+        }
+        ]
+      }
+    </script>
+
+</html>
