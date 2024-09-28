@@ -140,7 +140,14 @@ footer {
 
 /* Responsive styles for the menu */
 @media (max-width: 768px) {
-    .menu {
+    /* Show the menu when clicked (JavaScript will toggle this class) */
+    .menu-icon {
+        display: block;
+    }
+    .menu.show {
+        display: block;
+    }
+        .menu {
         display: none;
         flex-direction: column;
         background-color: white;
@@ -150,17 +157,9 @@ footer {
         width: 100vh;
         padding: 10px;
     }
-    /* Show the menu when clicked (JavaScript will toggle this class) */
-    .menu.show {
-        display: block;
-}
     .menu li {
         margin: 10px 0;
         text-align: right;
         padding-right: 10px;
-    }
-
-    .menu-icon {
-        display: block;
     }
 }
