@@ -56,8 +56,8 @@ header {
 }
 
 .menu {
-    display:none;
-    /*display:flex; /* Hide the menu by default */
+    /*display:none;*/ /* Hide the menu by default */
+    display:flex; 
     /* position: absolute; Position absolute to the menu container */
     top: 100%;  /*Position it right below the header */
     right: 0;
