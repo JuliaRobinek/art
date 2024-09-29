@@ -197,10 +197,10 @@ footer {
 
 /*Responsive layout for middle-small screens*/
 @media screen and (max-width: 900px) {
-    .w-menu.responsive .dropdown {  /*this part of the header menu is set for every page to highlight which menu-point is displayed on current page*/
-        font-weight: 550;
+    /*.w-menu.responsive .dropdown {  /*this part of the header menu is set for every page to highlight which menu-point is displayed on current page*/
+       /* font-weight: 550;
         color: white;
-    }
+    }*/
     h1 {
         padding-top:0rem;
     }
@@ -220,9 +220,9 @@ footer {
         order: -1;
         margin-left: 1rem;
     }
-    footer {
+    /*footer {
         margin-right: 1.5rem;  /*!!!for a very weird reason the footer is too long compared to the header unless i set this here*/
-    }
+    /*}*/
 }
 /*Responsive layout for small screens*/
 @media screen and (max-width: 600px) {
