@@ -86,7 +86,7 @@ header {
 }
 
 /* Show the menu when clicked (JavaScript will toggle this class) */
-.menu.show {
+.show {
     display: block;
 }
 /* Highlight the menu when active (JavaScript will toggle this class) */
