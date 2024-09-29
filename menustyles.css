@@ -43,7 +43,7 @@ header {
 .home-icon-sign {
     transform: scale(0.2); /* Shrinks the element to 50% of its original size */
     position: absolute;
-    left: 0px;
+    left: 65px;
     top: -120px;
 }
 
