@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error loading menu:', error));
 });
 
-// JavaScript to set the current year in the footer
-document.getElementById("current-year").textContent = new Date().getFullYear();
+// JavaScript to set the current year in the footer - DELETING THIS AS THE HTML ALREADY HAS A PART WHERE CURRENT YEAR IS ADDED BY A FUNCTION
+// document.getElementById("current-year").textContent = new Date().getFullYear();
