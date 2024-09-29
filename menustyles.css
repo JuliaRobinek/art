@@ -33,6 +33,7 @@ header {
 .home-box {
     position:relative;
     display:flex;
+    height: auto; /*CHANGE TO A DIFFERENT SPEC IF NOT WORKING*/
 }
 .home-icon {
     color: rgba(51, 51, 51, 0.8);
