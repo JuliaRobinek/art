@@ -10,4 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // JavaScript to set the current year in the footer
+    // Get the current year
+    const currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = new Date().getFullYear();
