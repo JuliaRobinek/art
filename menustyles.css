@@ -40,13 +40,15 @@ header {
     text-decoration: none;
     font-size: 1.5em;
     margin-right: 1em;
+    width:auto;
+    min-width: max-content; /* Prevent the container from being smaller than its content */
     /*position: relative;*/
 }
 .home-icon-sign {
     transform: scale(0.07); /* Shrinks the element */
-    /*position: absolute;*/
-    /*left: -165px;*/
-    /*top: -430px;*/
+    position: absolute;
+    left: -290px;
+    top: -394px;
 }
 
 .menu-icon {
