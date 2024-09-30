@@ -1,3 +1,4 @@
+<script>
 console.log(document.getElementById('menu')); // This should not be null
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -11,5 +12,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // JavaScript to set the current year in the footer
     // Get the current year
+//    const currentYear = new Date().getFullYear();
+// document.getElementById("current-year").textContent = new Date().getFullYear();
+
+
+    // Get the current year
     const currentYear = new Date().getFullYear();
-document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // Insert the current year into the span with id="current-year"
+    document.getElementById('current-year').textContent = currentYear;
+</script>
