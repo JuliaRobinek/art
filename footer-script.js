@@ -1,4 +1,3 @@
-<script>
 console.log(document.getElementById('menu')); // This should not be null
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -21,4 +20,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Insert the current year into the span with id="current-year"
     document.getElementById('current-year').textContent = currentYear;
-</script>
