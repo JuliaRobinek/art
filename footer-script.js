@@ -14,9 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
 //    const currentYear = new Date().getFullYear();
 // document.getElementById("current-year").textContent = new Date().getFullYear();
 
-
-    // Get the current year
-    const currentYear = new Date().getFullYear();
-
-    // Insert the current year into the span with id="current-year"
-    document.getElementById('current-year').textContent = currentYear;
+// Insert the current year into the span with id="current-year"
+document.addEventListener('DOMContentLoaded', function() {
+ var currentYear = new Date().getFullYear();
+ document.getElementById('currentYear').textContent = currentYear;
+});
