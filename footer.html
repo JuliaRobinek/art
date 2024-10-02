@@ -17,14 +17,8 @@
     <footer>
         <div class="footer-content">
             <div class="footer-left">
-                
-                 <!--  Get the current year and insert it into the span with id="year" -->
-                <script>
-                    document.getElementById('year').textContent = new Date().getFullYear();
-                </script>
                 <p>&copy; <span id="year"></span></p>
                   <!--  <p>&copy; 2015 - <span id="current-year"></span> Julia Robinek</p> -->
-            
             </div>
             <div class="footer-right">
                 <a href="https://www.instagram.com" target="_blank">
@@ -32,6 +26,12 @@
                 </a>
             </div>
         </div>
+        
+        <!--  Get the current year and insert it into the span with id="year" -->
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    
     </footer>
 
         <!-- <script src="footer-script.js" defer></script> -->
