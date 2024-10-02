@@ -124,10 +124,7 @@ footer {
 .footer-left, .footer-right {
     color: rgba(51, 51, 51, 0.8);
 }
-#year {
-    size: 50px;
-    color: red;
-}
+
 /*.footer-left {
     display:flex;
     width:auto;
