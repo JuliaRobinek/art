@@ -6,13 +6,13 @@ body {
     font-family: raleway, sans-serif;
     background-color: rgb(245, 245, 245);
 }    
-/*header {
+header {
     margin-left: 3rem;
     margin-right: 3rem;
     padding-left: 0rem;
     padding-right: 0rem;
     padding-bottom: 1rem;  /*!!!for a very weird reason this is 1rem too long compared to the header of the ABOUT page unless i set this here*/
-/*}
+}
 footer {
     margin-right: -0.5rem;  /*!!!for a very weird reason the footer is too narrow compared to the header unless i set this here*/
 /*}*/
