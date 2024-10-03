@@ -149,9 +149,9 @@ footer {
 /* INDIVIDUAL PIC DISPLAY END*/ 
 
 /* GALLERY FOR ALL PICs START*/ 
-    h1 {
+/*    h1 {
         /*padding-top: 3rem;*/
-        margin-bottom: 2rem;
+/*        margin-bottom: 2rem;
         margin-left:3rem;
         margin-right:3rem;
         font-size: 1.3rem;
@@ -159,7 +159,7 @@ footer {
         color:rgba(0, 0, 0, 70%);
         text-transform: uppercase;
         display: block; 
-    }
+    } */
     .gallery {
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
