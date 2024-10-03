@@ -23,7 +23,10 @@
 
     <body class="IndexContent">
 
+	<!--	THIS LINE IS THE PLACEHOLDER FOR THE EXTERNAL MENU HTML FILE, HOWEVER IT DOES NOT WORK ON THE GITHUB SERVER, HENCE REPLACED BY THE BELOW HARDCODED MENU, WHICH NEEDS TO BE COPIED INTO EVERY WEBPAGE 
         <div id="menu"> </div><!-- Placeholder for the menu -->
+
+	
 	    
         <h1>paintings 2023</h1>
         <div class="gallery">     <!--Start of grid gallery-->
@@ -176,7 +179,33 @@
             <a class="lightbox-close" href="#dog8h"></a>
         </div>
 
-	<div id="footer"> </div><!-- Placeholder for the menu -->
+<!--	THIS SECTION WOULD CALL THE EXTERNAL FOOTER HTML FILE, HOWEVER IT DOES NOT WORK ON THE GITHUB SERVER, HENCE REPLACED BY THE BELOW HARDCODED FOOTER, WHICH NEEDS TO BE COPIED INTO EVERY WEBPAGE 	    
+<!--	<div id="footer"> </div><!-- Placeholder for the menu -->
+
+<!--	<script src="menu-script.js" defer></script> <!-- JavaScript file that loads the menu -->
+<!--	<script src="menu-script-active.js" defer></script> <!-- JavaScript file that loads the menu -->
+<!--    <script src="footer-script.js" defer></script> <!-- JavaScript file that loads the footer -->
+
+    <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; Julia Robinek 2015 - <span id="year"></span></p>
+                  <!--  <p>&copy; 2015 - <span id="current-year"></span> Julia Robinek</p> -->
+            </div>
+            <div class="footer-right">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="Logos/logoInstaGraySmall-toUse.svg" alt="Instagram Icon" class="social-icon">
+                </a>
+            </div>
+        </div>
+        
+        <!--  Get the current year and insert it into the span with id="year" -->
+        <script defer>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>    
+    </footer>
+    <!-- Footer Section End -->
 
     </body>
 
@@ -279,7 +308,4 @@
       }
     </script>
 
-	<script src="menu-script.js" defer></script> <!-- JavaScript file that loads the menu -->
-	<script src="menu-script-active.js" defer></script> <!-- JavaScript file that loads the menu -->
-        <script src="footer-script.js" defer></script> <!-- JavaScript file that loads the footer -->
 </html>
