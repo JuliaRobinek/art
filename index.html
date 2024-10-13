@@ -47,11 +47,21 @@
     </footer>
     <!-- Footer Section End -->
     
-   <script src="menu-script.js" defer></script> <!-- JavaScript file that loads the menu -->
+   <!-- <script src="menu-script.js" defer></script> <!-- JavaScript file that loads the menu -->
    <!-- <script src="menu-script-responsive.js" defer></script> <!-- JavaScript file that loads the menu -->
    <!-- <script src="menu-script-active.js" defer></script> <!-- JavaScript file that loads the menu --> 
 
-    <script>
+      <script>
+        // Add the menu on top of every page of the website
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html') // Load the menu.html file
+                .then(response => response.text()) // Convert to text
+                .then(data => {
+                    document.getElementById('wholehead').innerHTML = data; // Insert the menu HTML into the page
+                })
+                .catch(error => console.error('Error loading menu:', error));
+        });
+    
                 // JavaScript to toggle the responsive menu and header background
         document.getElementById("menu-icon").addEventListener("click", function() {
             var menu = document.getElementById("menu");
