@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2em 1em;
+    padding: 1em 1em;
     z-index: 1000;
     background-color: rgb(245, 245, 245);
 }
@@ -54,9 +54,9 @@ header {
 
 .menu-icon {
     display: none;
-    font-size: 30px;
+    font-size: 1.5em;
     color: rgba(51, 51, 51, 0.8);
-    margin-right: 30px;
+    margin-right: 1.5em;
     cursor: pointer;
 }
 
@@ -68,20 +68,19 @@ header {
     right: 0;
     background-color: rgb(245, 245, 245);
     list-style: none;
-    padding: 10px 0;
+    padding: 1em 0;
     margin: 0;
     z-index: 1000;
-    width: 450px; /* Adjust width as needed */
 }
 
 #menu li {
-    margin: 0 15px;
+    margin: 0 1em;
 }
 
 #menu a {
     text-decoration: none;
     color: rgba(51, 51, 51, 0.8);
-    padding: 8px 16px;
+    padding: 0em 1.5em;
     transition: color 0.3s;
 }
 
@@ -93,6 +92,7 @@ header {
 /* Show the menu when clicked (JavaScript will toggle this class) */
 .show {
     display: block;
+    width: 100vw;  /* Drop down list box Should occupy 100% of the width of viewport */
 }
 /* Highlight the menu when active (JavaScript will toggle this class) */
 .active {
@@ -105,15 +105,14 @@ footer {
     background-color: rgb(245, 245, 245);
     color: rgba(51, 51, 51, 0.8);
     text-align: center;
-    padding: 20px 0;
+    padding: 1.5em 1em;
     position: relative;
-    bottom: 0px;
+    bottom: 0em;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 .footer-content {
@@ -133,9 +132,9 @@ footer {
 /*}*/
 
 .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 30px;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 2.5em;
 }
 
 /* New CSS class for the header when the burger menu is active */
@@ -166,11 +165,10 @@ footer {
         top: 90px;
         right: 0;
         width: 100vh;
-        padding: 10px;
+        padding: 2em;
     }
     #menu li {
-        margin: 10px 0;
+        margin: 1em 0;
         text-align: right;
-        padding-right: 10px;
     }
 }
