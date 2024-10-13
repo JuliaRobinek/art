@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: raleway, sans-serif;
+    font-size: 1em;
 }
 
 /* Header styles */
@@ -15,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 2em 1em;
     z-index: 1000;
     background-color: rgb(245, 245, 245);
 }
