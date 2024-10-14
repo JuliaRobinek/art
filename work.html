@@ -6,8 +6,8 @@
     <title>Julia Robinek</title>
     <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
     <!-- <link rel="stylesheet" href="indexstyles.css"> -->
-    <link rel="preload" href="indexstyles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="work.css" as="style" onload="this.rel='stylesheet'">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +31,7 @@
                 </div>
                 <ul class="menu" id="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Work</a></li>  <!-- CHANGE THIS SO THAT IT FIRST GOES TO a GALLERY OF 3 CHOICES-->
+                    <li><a href="work.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -41,9 +41,21 @@
         <!-- Header Section End -->
     
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="WebImages/IMG_6822.jpg" alt="Hero Image" class="hero-image">
-    </section>
+    <h1>work</h1>
+    <div class="gallery">     <!--Start of grid gallery-->
+            <a class="lightbox" href="work2015-2019.html">   <!--executes the container with id "dog1" when clicked on this anchor-->
+                <img src="WebImages/IMG_6810.jpg" alt="Julia Robinek painting titled Two projections" title="Julia Robinek painting titled Two projections">
+                <h3>Paintings 2015-2019</h3>
+            </a>           
+            <a class="lightbox" href="work2020-2022.html">   <!--smaller sized images are displayed for this tumbnail view-->
+                <img src="WebImages/IMG_6820.jpg" alt="Julia Robinek painting titled The surface is the great divider " title="Julia Robinek painting titled The surface is the great divider ">
+                <h3>Paintings 2020-2022</h3>
+            </a>           
+            <a class="lightbox" href="work2023.html">
+                <img src="WebImages/IMG_6775.jpg" alt="Julia Robinek painting titled The voice in the head" title="Julia Robinek painting titled The voice in the head">
+                <h3>Paintings 2023-NOW</h3>
+            </a>            
+    </div>     <!--End of grid gallery-->
 
     <!-- Footer Section -->
     <!-- <div id="footer"> </div><!-- Placeholder for the footer -->
