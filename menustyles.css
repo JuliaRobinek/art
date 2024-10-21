@@ -21,7 +21,8 @@ header {
     padding-left: 1.5em;
     padding-right: 1.5em;
     z-index: 1000;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(242, 242, 242);
+    box-shadow: 5px 5px 5px rgba(119, 118, 118, 0.1);
 }
 /* Menu container to position relative */
 .menu-container {
@@ -63,12 +64,9 @@ header {
     cursor: pointer;
 }
 #menu {
-    /*display:none;*/ /* Hide the menu by default */
     display:flex; 
-    /* position: absolute; Position absolute to the menu container */
     top: 100%;  /*Position it right below the header */
     right: 0;
-    background-color: rgb(245, 245, 245);
     list-style: none;
     padding: 0em 0;
     margin-left: 0;
@@ -100,8 +98,9 @@ header {
 
 /* Footer styles */
 footer {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(250, 250, 250);
     color: rgba(51, 51, 51, 0.8);
+    box-shadow: 0px -5px 5px rgba(119, 118, 118, 0.1);
     text-align: center;
     padding: 1.5em 1em;
     position: relative;

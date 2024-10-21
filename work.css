@@ -11,16 +11,6 @@ body {
     left:-40px;
     transform: scale(0.4); /* Shrinks the element */
 }
-/*header {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 1rem;  /*!!!for a very weird reason this is 1rem too long compared to the header of the ABOUT page unless i set this here*/
-/*}
-footer {
-    margin-right: -0.5rem;  /*!!!for a very weird reason the footer is too narrow compared to the header unless i set this here*/
-/*}*/
 
 /* INDIVIDUAL PIC DISPLAY START*/ 
 /* Partially referenced from https://codepen.io/ongtiffany/pen/BoOeQV */
@@ -34,7 +24,7 @@ footer {
         width: 100%;
         height: 100%;
         opacity: 0.1;
-        z-index: 1;
+        z-index: 1002;
         transition: opacity 0.8s ease-in-out;
         overflow: hidden;
     }
@@ -50,12 +40,13 @@ footer {
     opacity: 0.8;
     transition: opacity 0.8s ease-in-out;
     overflow: hidden;
+    z-index: 3000;
     }
     
     /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
 
     .lightbox-target .lefttext {
-        z-index: 2;         
+        z-index: 1003;         
         width: 25%;
         margin-left: 1rem;
         margin-top: 1rem;
@@ -78,7 +69,7 @@ footer {
         padding-top: 2rem;
     }    
     .lightbox-target .pic {
-    z-index: 2;
+    z-index: 1003;
     max-height:95%; /*to have some background above and below the pic*/
     height: auto;   /*but make it be only as high as the photo is, so a landscape will naturally be shorter*/
     margin-right: 3rem; /*to keep distance from the closing icon*/
@@ -94,7 +85,7 @@ footer {
     /* Styles the close link, adds the slide down transition */
     
     a.lightbox-close {
-    z-index: 2;                    
+    z-index: 1003;                    
     display: block;
     width:2rem;
     height:2rem;
@@ -173,7 +164,6 @@ footer {
         margin-bottom: 2rem;
         margin-left: 3rem;
         margin-right: 3rem;
-        
         }  
     .lightbox {        /*centers its content (needed for images with different shape than its container*/
       display: block;  
