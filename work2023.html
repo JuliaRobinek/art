@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julia Robinek</title>
     <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
-    <!-- <link rel="stylesheet" href="indexstyles.css"> -->
+
     <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="work.css" as="style" onload="this.rel='stylesheet'">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap" rel="stylesheet" />
-
 </head>
 <body>
-    <!-- Header Section -->
-   <!-- <div id="wholehead"> </div> Placeholder for the menu -->
-
         <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
     <header>
         <div class="header-content">
@@ -25,17 +18,15 @@
                 <a href="index.html" class="home-icon">Julia Robinek</a>
                 <div class="home-icon-sign"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
             </div>
-            <!-- <div class="menu-container"> -->
                 <div class="menu-icon" id="menu-icon">
                     ☰ <!-- Hamburger icon -->
                 </div>
                 <ul class="menu" id="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Work</a></li>  <!-- CHANGE THIS SO THAT IT FIRST GOES TO a GALLERY OF 3 CHOICES-->
+                    <li><a href="work.html" class="activem">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            <!-- </div> -->
         </div>
     </header>
         <!-- Header Section End -->
@@ -47,7 +38,7 @@
                 <img src="WebImages/IMG_6784.jpg" alt="Julia Robinek painting titled Man-made jail for all 2023" title="Julia Robinek painting titled Man-made jail for all 2023">
                 <h3>Man-made jail for all, 2023</h3>
             </a>           
-            <a class="lightbox" href="#dog2">   <!--smaller sized images are displayed for this tumbnail view-->
+            <a class="lightbox" href="#dog2">
                 <img src="WebImages/IMG_6781.jpg" alt="Julia Robinek painting titled The victims of priorities 2023" title="Julia Robinek painting titled The victims of priorities 2023">
                 <h3>The victims of priorities, 2023</h3>
             </a>           
@@ -95,8 +86,7 @@
             <br>
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
-        <picture class="pic"> <!--switches to the smaller sized images on small screen-->
-            <!--<source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-TwoSides-2023-15percent.jpg" media="(max-width: 600px)">-->
+        <picture class="pic">
             <img src="WebImages/IMG_6784.jpg" alt="Julia Robinek painting titled Man-made jail for all 2023" title="Julia Robinek painting titled Man-made jail for all 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog1h"></a>   <!-- href="" links to the element that has this id, this is where we jump back after executing the lightbox-close element  -->
@@ -123,7 +113,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MarineBlue-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MarineBlue-2023-30percent.jpg" alt="Per Anders fine art painting titled Marine Blue from 2023" title="Per Anders fine art painting titled Marine Blue from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog3h"></a>
@@ -137,7 +126,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MaybeSo-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-MaybeSo-2023-30percent.jpg" alt="Per Anders fine art painting titled Maybe So from 2023" title="Per Anders fine art painting titled Maybe So from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog4h"></a>
@@ -151,7 +139,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-TheStart-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titeled-TheStart-2023-30percent.jpg" alt="Per Anders fine art painting titled The Start from 2023" title="Per Anders fine art painting titled The Start from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog5h"></a>
@@ -165,7 +152,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Afternoon-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Afternoon-2023-30percent.jpg" alt="Per Anders fine art painting titled Afternoon from 2023" title="Per Anders fine art painting titled Afternoon from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog6h"></a>
@@ -179,7 +165,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Bay-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-Bay-2023-30percent.jpg" alt="Per Anders fine art painting titled Bay from 2023" title="Per Anders fine art painting titled title Bay from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog7h"></a>
@@ -193,7 +178,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-30percent.jpg" alt="Per Anders fine art painting titled Blue Zone from 2023" title="Per Anders fine art painting titled Blue Zone from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog9h"></a>
@@ -207,7 +191,6 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-30percent.jpg" alt="Per Anders fine art painting titled Blue Zone from 2023" title="Per Anders fine art painting titled Blue Zone from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog9h"></a>
@@ -221,21 +204,16 @@
             <p class="copyright">Copyright &copy; Julia Robinek</p>
         </div>
         <picture class="pic">
-            <source srcset="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-15percent.jpg" media="(max-width: 600px)">
             <img src="Images-WebCommWebProd-2023WinterExam-JRobinek/Fine-Art-Painting-Per-Anders-Titled-BlueZone-2023-30percent.jpg" alt="Per Anders fine art painting titled Blue Zone from 2023" title="Per Anders fine art painting titled Blue Zone from 2023"/>
         </picture>
         <a class="lightbox-close" href="#dog10h"></a>
     </div>
-    <!-- Footer Section -->
-    <!-- <div id="footer"> </div><!-- Placeholder for the footer -->
-    <!--    <script src="footer-script.js" defer></script> <!-- JavaScript file that loads the footer -->
     
     <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
     <footer>
         <div class="footer-content">
             <div class="footer-left">
                 <p>&copy; Julia Robinek 2015 - <span id="year"></span></p>
-                  <!--  <p>&copy; 2015 - <span id="current-year"></span> Julia Robinek</p> -->
             </div>
             <div class="footer-right">
                 <a href="https://www.instagram.com/juliarobinek" target="_blank">
@@ -250,10 +228,6 @@
         </script>    
     </footer>
     <!-- Footer Section End -->
-    
-   <!-- <script src="menu-script.js" defer></script> <!-- JavaScript file that loads the menu -->
-   <!-- <script src="menu-script-responsive.js" defer></script> <!-- JavaScript file that loads the menu -->
-   <!-- <script src="menu-script-active.js" defer></script> <!-- JavaScript file that loads the menu --> 
 
       <script>
         // Add the menu on top of every page of the website
@@ -278,21 +252,7 @@
                 menu.classList.add("show");
                 header.classList.add("header-active"); // Add half-transparent gray
             }
-        });
-    
-        // Add the active class to the active menu link, so it can be highlighted in css
-        let currentPage = window.location.pathname.split("/").pop(); // Get the current URL path (e.g., "/about.html")
-        let menuLinks = document.querySelectorAll("header div ul li a"); // Get all the menu links
-        // Loop through each menu link and check if its href matches the current page
-        menuLinks.forEach(link => {
-          let linkPage = link.getAttribute("href");
-          
-          if (linkPage === currentPage) {
-            // Add the 'active' class to highlight the current menu item
-            link.classList.add("active");
-          }
-        });
-        
+        }); 
     </script>
       
 </body>

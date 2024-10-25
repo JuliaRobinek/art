@@ -6,8 +6,8 @@
     <title>Julia Robinek</title>
     <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
 
-    <link rel="preload" href="contactstyles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="contactstyles.css" as="style" onload="this.rel='stylesheet'">
 
 </head>
 <body>
@@ -23,9 +23,9 @@
                 </div>
                 <ul class="menu" id="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Work</a></li>  <!-- CHANGE THIS SO THAT IT FIRST GOES TO a GALLERY OF 3 CHOICES-->
+                    <li><a href="work.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="activem">Contact</a></li>
                 </ul>
         </div>
     </header>
@@ -99,19 +99,6 @@
                 header.classList.add("header-active"); // Add half-transparent gray
             }
         });
-        
-            // Add the active class to the active menu link, so it can be highlighted in css
-            let currentPage = window.location.pathname.split("/").pop(); // Get the current URL path (e.g., "/about.html")
-            let menuLinks = document.querySelectorAll("header div ul li a"); // Get all the menu links
-            // Loop through each menu link and check if its href matches the current page
-            menuLinks.forEach(link => {
-                let linkPage = link.getAttribute("href");
-            if (linkPage === currentPage) {
-                // Add the 'active' class to highlight the current menu item
-                link.classList.add("active");
-            }
-        });
-
     </script>
       
 </body>

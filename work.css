@@ -1,12 +1,10 @@
-/*Formatting for Gallery20XX.html*/
+/*Formatting for all work.html*/
 
 body {
-    /*margin-top:7rem;
-    overflow-x: hidden; /*removes the scroll bar on the x axis (that appeared due to horizontally oversized image)*/
     font-family: raleway, sans-serif;
     background-color: rgb(245, 245, 245);
 }    
-.home-icon-sign{ /*workaround to overwrite the placement of this icon as it disappears in the header when used on the "work" page*/
+.home-icon-sign{ /*workaround to overwrite the placement of this icon as it disappears in the header when used on the "work" page, i guess the z-index is a mess*/
     top:-110px;
     left:-40px;
     transform: scale(0.4); /* Shrinks the element */
@@ -48,9 +46,9 @@ body {
     .lightbox-target .lefttext {
         z-index: 1003;         
         width: 25%;
-        margin-left: 1rem;
-        margin-top: 1rem;
-        font-size:0.9rem;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-size:0.9em;
         text-align: start;
         color:white;
         transition: 0.18s ease-in-out;  
@@ -59,21 +57,21 @@ body {
         color:white;
         font-weight: 400;
         text-transform: uppercase;
-        padding-bottom: 2rem;
+        padding-bottom: 2em;
     }
     .lightbox-target .lefttext p {
         font-weight: 300;
     }   
     .lightbox-target .lefttext .copyright {
-        font-size: 0.8rem;
-        padding-top: 2rem;
+        font-size: 0.8em;
+        padding-top: 2em;
     }    
     .lightbox-target .pic {
     z-index: 1003;
     max-height:95%; /*to have some background above and below the pic*/
     height: auto;   /*but make it be only as high as the photo is, so a landscape will naturally be shorter*/
-    margin-right: 3rem; /*to keep distance from the closing icon*/
-    margin-top:1rem;
+    margin-right: 3em; /*to keep distance from the closing icon*/
+    margin-top:1em;
     }
     .lightbox-target .pic img {  
         max-height: 100%; /*maximum 100% of its container box*/
@@ -87,15 +85,15 @@ body {
     a.lightbox-close {
     z-index: 1003;                    
     display: block;
-    width:2rem;
-    height:2rem;
+    width:2em;
+    height:2em;
     box-sizing: border-box;
     background: white;
     background-color: rgba(0,0,0,0);
     text-decoration: none;
     position: absolute;
     top: -80px;
-    right: 1rem;
+    right: 1em;
     transition: 0.5s ease-in-out;
     }
 
@@ -159,11 +157,11 @@ body {
     .gallery {
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 2rem;
+        gap: 2em;
         object-fit: cover;
-        margin-bottom: 2rem;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin-bottom: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
         }  
     .lightbox {        /*centers its content (needed for images with different shape than its container*/
       display: block;  
@@ -171,18 +169,18 @@ body {
     } 
     img {
         max-width: 100%;
-        margin-bottom:1rem;
+        margin-bottom:1em;
     }
     h3 {
-        font-size:0.9rem;
+        font-size:0.9em;
         text-align: start;
         text-justify: center;
-        font-size: 0.9rem;
+        font-size: 0.9em;
         font-weight: 300;
         color:rgba(0, 0, 0, 70%);
         text-transform: uppercase;
         text-decoration: none;
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
     a {
         text-decoration: none;
@@ -197,7 +195,7 @@ body {
         color: white;
     }
     h1 {
-        padding-top:0rem;
+        padding-top:0em;
     }
     .gallery {
         display:grid;
@@ -206,17 +204,14 @@ body {
     .lightbox-target {       /*change the individual pic layout to img above - text below*/
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1em;
     }
     .lightbox-target .lefttext {
         width: 100%;
     }
     .lightbox-target .pic {  /*priorizes the pic box as first with the minus order*/
         order: -1;
-        margin-left: 1rem;
-    }
-    footer {
-        margin-right: 1.5rem;  /*!!!for a very weird reason the footer is too long compared to the header unless i set this here*/
+        margin-left: 1em;
     }
 }
 /*Responsive layout for small screens*/
@@ -226,9 +221,9 @@ body {
         grid-template-columns: 1fr;  /*changes the gallery to display 1 pic in a row*/
     }
     h1 {
-        margin-bottom:1.5rem;  /*reducing some white space*/
+        margin-bottom:1.5em;  /*reducing some white space*/
     }
     header {
-        padding-bottom:1rem;
+        padding-bottom:1em;
     }
 }

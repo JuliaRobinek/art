@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julia Robinek</title>
     <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
-    <!-- <link rel="stylesheet" href="indexstyles.css"> -->
+
     <link rel="preload" href="indexstyles.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap" rel="stylesheet" />
-
 </head>
 <body>
-    <!-- Header Section -->
-   <!-- <div id="wholehead"> </div> Placeholder for the menu -->
-
         <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
     <header>
         <div class="header-content">
@@ -25,17 +18,15 @@
                 <a href="index.html" class="home-icon">Julia Robinek</a>
                 <div class="home-icon-sign"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
             </div>
-            <!-- <div class="menu-container"> -->
                 <div class="menu-icon" id="menu-icon">
                     ☰ <!-- Hamburger icon -->
                 </div>
                 <ul class="menu" id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Work</a></li>  <!-- CHANGE THIS SO THAT IT FIRST GOES TO a GALLERY OF 3 CHOICES-->
+                    <li><a href="index.html" class="activem">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            <!-- </div> -->
         </div>
     </header>
         <!-- Header Section End -->
@@ -45,16 +36,11 @@
         <img src="WebImages/IMG_6822.jpg" alt="Hero Image" class="hero-image">
     </section>
 
-    <!-- Footer Section -->
-    <!-- <div id="footer"> </div><!-- Placeholder for the footer -->
-    <!--    <script src="footer-script.js" defer></script> <!-- JavaScript file that loads the footer -->
-    
     <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
     <footer>
         <div class="footer-content">
             <div class="footer-left">
                 <p>&copy; Julia Robinek 2015 - <span id="year"></span></p>
-                  <!--  <p>&copy; 2015 - <span id="current-year"></span> Julia Robinek</p> -->
             </div>
             <div class="footer-right">
                 <a href="https://www.instagram.com/juliarobinek" target="_blank">
@@ -69,10 +55,6 @@
         </script>    
     </footer>
     <!-- Footer Section End -->
-    
-   <!-- <script src="menu-script.js" defer></script> <!-- JavaScript file that loads the menu -->
-   <!-- <script src="menu-script-responsive.js" defer></script> <!-- JavaScript file that loads the menu -->
-   <!-- <script src="menu-script-active.js" defer></script> <!-- JavaScript file that loads the menu --> 
 
       <script>
         // Add the menu on top of every page of the website
@@ -98,20 +80,6 @@
                 header.classList.add("header-active"); // Add half-transparent gray
             }
         });
-    
-        // Add the active class to the active menu link, so it can be highlighted in css
-        let currentPage = window.location.pathname.split("/").pop(); // Get the current URL path (e.g., "/about.html")
-        let menuLinks = document.querySelectorAll("header div ul li a"); // Get all the menu links
-        // Loop through each menu link and check if its href matches the current page
-        menuLinks.forEach(link => {
-          let linkPage = link.getAttribute("href");
-          
-          if (linkPage === currentPage) {
-            // Add the 'active' class to highlight the current menu item
-            link.classList.add("active");
-          }
-        });
-        
     </script>
       
 </body>

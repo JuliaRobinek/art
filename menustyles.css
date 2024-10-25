@@ -47,20 +47,19 @@ header {
     width:auto;
     min-width: max-content; /* Prevent the container from being smaller than its content */
     z-index:999;
-    /*position: relative;*/
 }
 .home-icon-sign {
-    transform: scale(0.07); /* Shrinks the element */
+    transform: scale(0.12); /* Shrinks the element */
     position: absolute;
     left: -290px;
-    top: -420px;/*-394px;*/
+    top: -420px;
     z-index:998;
 }
 .menu-icon {
     display: none;
     font-size: 1.5em;
     color: rgba(51, 51, 51, 0.8);
-    margin-right: 1.5em;
+    margin-right: 2em;
     cursor: pointer;
 }
 #menu {
@@ -83,18 +82,17 @@ header {
     color: black;
     font-weight:600;
 }
+#menu .activem {  /*highlight which menu-point is active and spare a JavaScript with it*/
+    font-weight: 700;
+    color: rgba(51, 51, 51, 0.9);
+}
 
 /* Show the menu when clicked (JavaScript will toggle this class) */
 .show {
     display: block;
-    width: 100vw;  /* Drop down list box Should occupy 100% of the width of viewport */
+    width: 100vw;  /* Drop down list box to occupy 100% of the width of viewport */
     height: 100vh;
 }
-/* Highlight the menu when active (JavaScript will toggle this class) */
-.active {
-    font-weight: bold;
-    color: red;
-  }
 
 /* Footer styles */
 footer {
@@ -122,6 +120,7 @@ footer {
 .footer-right{
     vertical-align: bottom;
     position:relative;
+    padding-right: 0.5em;
 }
 .social-icon {
     top: 50%;
@@ -147,11 +146,11 @@ footer {
 
 /* New CSS class for the header when the burger menu is active */
 .header-active {
-    background-color: rgba(51, 51, 51, 0.724); /* Half-transparent gray */
-    .home-icon {
-        color:white;
+    background-image: linear-gradient(gray, white);
+.home-icon {
+    color:white;
     }
-    .menu-icon {
+.menu-icon {
         color:white;
     }
 }
@@ -170,7 +169,7 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 90px;
+        top: 88px;
         right: 0;
         width: 100vh;
         padding: 2em;

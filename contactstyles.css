@@ -3,11 +3,7 @@ body {
     font-family: raleway, sans-serif;
     background-color: rgb(245, 245, 245);
 }    
-.home-icon-sign{ /*workaround to overwrite the placement of this icon as it disappears in the header when used on the "work" page*/
-    top:-110px;
-    left:-40px;
-    transform: scale(0.4); /* Shrinks the element */
-}
+
 /* Hero section styles */
 .ContactContent {
     margin-top:6em;
@@ -90,8 +86,9 @@ address { /*Display: none until figured out about mail address*/
     font-size:0.8em;
     font-style: normal;
     margin-top:2em;
-    margin-left:3em;
+    margin-left:2.5em;
     padding-left:0;
+    padding-right: 1.5em;
     text-align: justify;
 }
 /*CONTACT PAGE END*/

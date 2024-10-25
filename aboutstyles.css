@@ -1,6 +1,5 @@
 /* Basic styles for the body */
 body {
-    /*overflow-x: hidden; /*removes the scroll bar on the x axis (that appeared due to horizontally oversized image)*/
     font-family: raleway, sans-serif;
     background-color: rgb(245, 245, 245);
 }    
@@ -10,7 +9,7 @@ body {
     transform: scale(0.4); /* Shrinks the element */
 }
 /* Hero section styles */
-.AboutContent {       /*TO FIX THIS TOP, DON'T KNOW WHERE IT'S SET, LOOKS LIKE THE H1 TOP MARGIN DETERMINES*/
+.AboutContent { 
     margin-top:6em;
     color:rgba(0, 0, 0, 70%);
 }
@@ -58,7 +57,3 @@ dd {
     padding-bottom: 1em;
     font-style: italic;
 }
-/*.aboutmenupoint {  this part of the header menu is set for every page to highlight which menu-point is displayed on current page
-    font-weight: 400;
-    color: black;
-}*/
