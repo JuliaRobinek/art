@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Robinek</title>
+    <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
+
+    <link rel="preload" href="contactstyles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
+
+</head>
+<body>
+        <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
+    <header>
+        <div class="header-content">
+            <div class="home-box">
+                <a href="index.html" class="home-icon">Julia Robinek</a>
+                <div class="home-icon-sign"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
+            </div>
+                <div class="menu-icon" id="menu-icon">
+                    ☰ <!-- Hamburger icon -->
+                </div>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>  <!-- CHANGE THIS SO THAT IT FIRST GOES TO a GALLERY OF 3 CHOICES-->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </div>
+    </header>
+        <!-- Header Section End -->
+    
+    <!-- Hero Section -->
+    <hero class="ContactContent">
+            <h1>contact | catalog with available works</h1> 
+            <address> <!-- Display: none until figured out about mail address -->
+                <p>Please send all enquiries to </p>
+                <p>mail@address.com</p>
+                <p>South of Denmark</p>
+            </address>
+            <h2>enquiry | catalog with available works</h2> <!-- Display: none until figured out about mail address -->
+            <form action="formdata.php" method="post" id="formid">
+                    <label for="personname">Name*</label>
+                        <input type="text" id="personname" name="personname" required>
+                    <label for="personemail">Email*</label>
+                        <input type="email" id="personemail" name="personemail" required>
+                    <label for="personphone">Phone</label>
+                        <input type="tel" id="personphone" name="personphone">
+                   <label for="personmessage">Message</label>
+                        <textarea id="personmessage" name="personmessage" rows="7" cols="100"></textarea>
+                    <!--<button id="formid">Send</button>-->
+                    <input type='submit' value='send' id="formid" class="send" /> <!--above button changed to this so that the confirmation message from the php file can pop up -->
+            </form>
+            <p class="privacytext">In order to answer your enquiry, we will process your personal data you share with us here in accordance with our privacy policy. We are happy to share our privacy policy upon request. You can always unsubscribe and amend your preferences at the link we provide in our emails.</p>
+        </hero>
+
+    <!-- Footer Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; Julia Robinek 2015 - <span id="year"></span></p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.instagram.com/juliarobinek" target="_blank">
+                    <img src="Logos/logoInstaGraySmall-toUse.svg" alt="Instagram Icon" class="social-icon">
+                </a>
+            </div>
+        </div>
+        
+        <!--  Get the current year and insert it into the span with id="year" -->
+        <script defer>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>    
+    </footer>
+    <!-- Footer Section End -->
+
+    <script>
+        // Add the menu on top of every page of the website
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html') // Load the menu.html file
+                .then(response => response.text()) // Convert to text
+                .then(data => {
+                    document.getElementById('wholehead').innerHTML = data; // Insert the menu HTML into the page
+                })
+                .catch(error => console.error('Error loading menu:', error));
+        });
+    
+                // JavaScript to toggle the responsive menu and header background
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            var menu = document.getElementById("menu");
+            var header = document.querySelector("header");
+        
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+                header.classList.remove("header-active"); // Remove half-transparent gray
+            } else {
+                menu.classList.add("show");
+                header.classList.add("header-active"); // Add half-transparent gray
+            }
+        });
+        
+            // Add the active class to the active menu link, so it can be highlighted in css
+            let currentPage = window.location.pathname.split("/").pop(); // Get the current URL path (e.g., "/about.html")
+            let menuLinks = document.querySelectorAll("header div ul li a"); // Get all the menu links
+            // Loop through each menu link and check if its href matches the current page
+            menuLinks.forEach(link => {
+                let linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                // Add the 'active' class to highlight the current menu item
+                link.classList.add("active");
+            }
+        });
+
+    </script>
+      
+</body>
+</html>
