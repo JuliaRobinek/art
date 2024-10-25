@@ -78,7 +78,7 @@ body {
     .lightbox-target .pic img {  
         max-height: 100%; /*maximum 100% of its container box*/
         max-width: 100%;
-        border: 15px solid white; /*finally adding the border directly to the img, so it flexibly adjusts around it*/
+        border: 5px solid white; /*finally adding the border directly to the img, so it flexibly adjusts around it*/
         box-sizing: border-box;
     }
 
