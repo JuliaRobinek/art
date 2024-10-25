@@ -40,7 +40,10 @@
                 <p>South of Denmark</p>
             </address>
             <h2>enquiry | catalog with available works</h2> <!-- Display: none until figured out about mail address -->
-            <form action="mailto:juliarobinek@hotmail.com" enctype="text/plain" id="formid">
+            <form action="https://api.web3forms.com/submit" method="POST" id="formid">
+                       <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="34d5f032-9c2a-4db4-bdff-5b6cde62f4d9">
+
                     <label for="personname">Name*</label>
                         <input type="text" id="personname" name="personname" required>
                     <label for="personemail">Email*</label>
@@ -49,6 +52,12 @@
                         <input type="tel" id="personphone" name="personphone">
                    <label for="personmessage">Message</label>
                         <textarea id="personmessage" name="personmessage" rows="7" cols="100"></textarea>
+                    
+                       <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
                     <input type='submit' value='send' id="formid" class="send" /> 
             </form>
             <p class="privacytext">In order to answer your enquiry, we will process your personal data you share with us here in accordance with our privacy policy. We are happy to share our privacy policy upon request. You can always unsubscribe and amend your preferences at the link we provide in our emails.</p>
