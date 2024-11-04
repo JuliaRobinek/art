@@ -116,6 +116,15 @@ footer {
 }
 .footer-left, .footer-right {
     color: rgba(51, 51, 51, 0.8);
+    text-align: left;
+}
+.footer-left p {
+    padding-bottom: 0;
+    margin-bottom:0;
+}
+.footer-left a {
+    padding-top: 1em;
+    font-size: 0.8em;
 }
 .footer-right{
     vertical-align: bottom;
