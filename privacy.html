@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julia Robinek</title>
+    <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
+
+    <link rel="preload" href="aboutstyles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
+    <header>
+        <div class="header-content">
+            <div class="home-box">
+                <a href="index.html" class="home-icon">Julia Robinek</a>
+                <div class="home-icon-sign"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
+            </div>
+                <div class="menu-icon" id="menu-icon">
+                    ☰ <!-- Hamburger icon -->
+                </div>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </div>
+    </header>
+        <!-- Header Section End -->
+    
+    <!-- Hero Section -->
+    <hero class="AboutContent">
+        <h1>privacy policy</h1>
+        <article>
+            <p class="typewriter">
+                This Policy explains how your personal data may be processed when you visit and browse our website and social media channels, or when you actively share information about you via e-mail or the contact form.
+            </p>
+            <p></p>
+            <b>
+                Data controller
+            </b>
+            <p>
+                This website is operated by Julia Robinek. Contact us via the contact form on juliarobinek.com with any questions regarding this Policy or any other data protection issue related to us.
+            </p>
+            <b>
+                What we do not collect
+            </b>
+            <p>
+                In line with our values, we have built this site so that we do not collect any data from visitors for any purpose. Our only interests are informing you about the artistic work of Julia Robinek, enabling you to contact us and maintaining the security of the website, therefore:
+            </p>
+            <ul>
+                <li>we do not set any cookies at all on this site or your own device;</li>
+                <li>we do not collect any data whatsoever about people who visit our site, unless you actively send us an enquiry and share information about yourself or subscribe to our mailing list;</li>
+                <li>we do not conduct any analysis of how people use our site;</li>
+                <li>we do not allow third-party tracking of any kind on this site.</li>
+            </ul>
+            <p></p>
+            <b>
+                Third party data processing and retention
+            </b>
+            <p>
+                Julia Robinek has selected Github to host its website because of its focus on static sites. Github does not set cookies for its hosted websites, it simply stores HTML, CSS, JavaScript files for juliarobinek.com.
+            </p>
+            <p>
+                Juliarobinek.com uses Web3Forms to collect information shared via the contact form by anybody who submits the form. Web3Forms does not store any of the information submitted through website forms. It acts as a relay service, forwarding form submissions directly to the specified email address (email address of Julia Robinek) without retaining any data on its servers. The information you share with us is retained for the sole purpose of answering your enquiry and is not processed or shared any further.
+            </p>
+            <b>
+                Information security
+            </b>
+            <p>
+                Julia Robinek operates a static website because it is inherently more secure than dynamically generated websites (as there is nothing dynamic for scripting or database security attacks to exploit).
+            </p>
+            <b>
+                Social media
+            </b>
+            <p>
+                Julia Robinek also uses social media and social networking to inform people. Personal data processed by social media platforms is subject to the terms and conditions of the platform owners, which may act as controllers of that data. If you engage with Julia Antonia Robinek’s social media accounts you should check the Privacy Policy of the according social media, which are subject to regular change, to understand how your data may be used. Julia Robinek’s social media accounts and pages are managed by Julia Robinek, who is not responsible for any comments, links or content produced by third parties.
+            </p>
+            <b>
+                Your rights
+            </b>
+            <p>
+                Where Julia Robinek processes your personal data you may have the right:
+            </p>
+            <ul>
+                <li>to be informed as to whether Julia Robinek holds data about you;</li>
+                <li>to access that data;</li>
+                <li>to have inaccurate data corrected;</li>
+                <li>to have your data deleted;</li>
+                <li>to opt-out of particular data processing operations;</li>
+                <li>to receive your data in a form that makes it “portable”;</li>
+                <li>to object to data processing;</li>
+                <li>to receive an explanation about any automated decision making and/or profiling, and to challenge those decisions where appropriate.</li>
+            </ul>
+            <p>
+                You can seek to exercise these rights via contacting us on juliarobinek.com. Data subjects covered by EU law may be entitled to lodge complaints with the data protection supervisory authority in their country of residence.
+            </p>
+            <b>
+                Changes and revisions
+            </b>
+            <p>
+                We may update this Policy in future. We will maintain an accessible record of any such changes.
+            </p>
+            <p>
+                Policy published 4th November 2024.
+            </p>
+        </article>
+    </hero>
+
+    <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>Copyright &copy; Julia Robinek 2015 - <span id="year"></span></p>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.instagram.com/juliarobinek" target="_blank">
+                    <img src="Logos/logoInstaGraySmall-toUse.svg" alt="Instagram Icon" class="social-icon">
+                </a>
+            </div>
+        </div>
+        
+        <!--  Get the current year and insert it into the span with id="year" -->
+        <script defer>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>    
+    </footer>
+    <!-- Footer Section End -->
+
+      <script>
+        // Add the menu on top of every page of the website
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.html') // Load the menu.html file
+                .then(response => response.text()) // Convert to text
+                .then(data => {
+                    document.getElementById('wholehead').innerHTML = data; // Insert the menu HTML into the page
+                })
+                .catch(error => console.error('Error loading menu:', error));
+        });
+    
+                // JavaScript to toggle the responsive menu and header background
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            var menu = document.getElementById("menu");
+            var header = document.querySelector("header");
+        
+            if (menu.classList.contains("show")) {
+                menu.classList.remove("show");
+                header.classList.remove("header-active"); // Remove half-transparent gray
+            } else {
+                menu.classList.add("show");
+                header.classList.add("header-active"); // Add half-transparent gray
+            }
+        });
+    </script>
+      
+</body>
+</html>
