@@ -1,0 +1,17 @@
+article {
+    font-family: raleway, sans-serif;
+    background-color: rgb(245, 245, 245);
+    color:rgba(0, 0, 0, 70%);
+    padding-top:6em;
+    font-size: 1.5em;
+    text-align: center;
+    height: 85vh;
+}
+.tick {
+    font-size: 5em;
+    padding-bottom: 0;
+} 
+p {
+    padding-bottom:0;
+}
+

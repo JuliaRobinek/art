@@ -7,7 +7,11 @@
     <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
 
     <link rel="preload" href="menustyles.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload" href="contactstyles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="thankstyles.css" as="style" onload="this.rel='stylesheet'">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -25,45 +29,26 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" class="activem">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
         </div>
     </header>
         <!-- Header Section End -->
     
     <!-- Hero Section -->
-    <hero class="ContactContent">
-            <h1>contact | catalog with available works</h1> 
-            <address> <!-- Display: none until figured out about mail address -->
-                <p>Please send all enquiries to </p>
-                <p>mail@address.com</p>
-                <p>South of Denmark</p>
-            </address>
-            <h2>enquiry | catalog with available works</h2> <!-- Display: none until figured out about mail address -->
-            <form action="https://api.web3forms.com/submit" method="POST" id="formid"> <!--https://web3forms.com/ to send form content as email-->
-                       <!-- Replace with your Access Key -->
-                    <input type="hidden" name="access_key" value="34d5f032-9c2a-4db4-bdff-5b6cde62f4d9">
+    <hero class="AboutContent">
+        <article>
+            <p class="tick">&#10003;</p>
+            <p>
+                Thank you! The form has been submitted successfully.
+            </p>
+            <p>
+                We will reply to you soon!
+            </p>
+        </article>
+    </hero>
 
-                    <label for="personname">Name*</label>
-                        <input type="text" id="personname" name="personname" required>
-                    <label for="personemail">Email*</label>
-                        <input type="email" id="personemail" name="personemail" required>
-                    <label for="personphone">Phone</label>
-                        <input type="tel" id="personphone" name="personphone">
-                   <label for="personmessage">Message</label>
-                        <textarea id="personmessage" name="personmessage" rows="7" cols="100"></textarea>
-                    
-                       <!-- Honeypot Spam Protection -->
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                    <!-- Custom Confirmation / Success Page -->
-                    <input type="hidden" name="redirect" value="https://juliarobinek.com/thanks.html">
-                    <input type='submit' value='send' id="formid" class="send" /> 
-            </form>
-            <p class="privacytext">In order to answer your enquiry, we will process your personal data you share with us here in accordance with our privacy policy. You can always amend your preferences by contacting us here.</p>
-        </hero>
-
-    <!-- Footer Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER -->
+    <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
     <footer>
         <div class="footer-content">
             <div class="footer-left">
@@ -84,7 +69,7 @@
     </footer>
     <!-- Footer Section End -->
 
-    <script>
+      <script>
         // Add the menu on top of every page of the website
         document.addEventListener("DOMContentLoaded", function() {
             fetch('menu.html') // Load the menu.html file
