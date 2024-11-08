@@ -39,6 +39,7 @@ body {
     transition: opacity 0.8s ease-in-out;
     overflow: hidden;
     z-index: 3000;
+    align-items: center;
     }
     
     /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
@@ -74,7 +75,7 @@ body {
     margin-top:1em;
     }
     .lightbox-target .pic img {  
-        max-height: 100%; /*maximum 100% of its container box*/
+        max-height: 90vh; /*maximum 90% of the viewport height, otherwise some img runs out at the bottom*/
         max-width: 100%;
         border: 5px solid white; /*finally adding the border directly to the img, so it flexibly adjusts around it*/
         box-sizing: border-box;
