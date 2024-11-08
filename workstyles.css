@@ -212,7 +212,12 @@ body {
     }
     .lightbox-target .pic {  /*priorizes the pic box as first with the minus order*/
         order: -1;
+        margin-top: 45px; /*the closing-cross is 35 px, so this only allows the pic 10px under the cross*/
         margin-left: 1em;
+        margin-right: 1em;
+    }
+    .lightbox-target a {
+        order: -2;        
     }
 }
 /*Responsive layout for small screens*/
