@@ -73,11 +73,7 @@ form textarea {
     height: 7em;
     resize: vertical; /*allows to resize the comment box vertically only*/
 }
-h2 { /*Display: none until figured out about mail address*/
-    display: none;
-}
-address { /*Display: none until figured out about mail address*/
-        display: none;
+address {
         font-size:1em;
         font-style: normal;
         margin-top:2em;
