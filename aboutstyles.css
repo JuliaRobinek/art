@@ -42,6 +42,9 @@ article, dl {
 p {
     padding-bottom: 1em;
 }
+.footer-left p {
+    padding-bottom: 0;
+}
 dt {
     font-weight: 500;
 }
