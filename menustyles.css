@@ -119,14 +119,24 @@ footer {
     text-align: left;
 }
 .footer-left p {
-    padding-bottom: 0.5em;
     margin-bottom:0;
 }
-.footer-left a {
+.footer-left .small {
+    display: flex;
+    justify-content: space-between;
+    height: 1em;
+    line-height: 1em;
+    width: 100%;
     padding-top: 1em;
     font-size: 0.8em;
-    text-decoration: none;
     color: rgba(51, 51, 51, 0.8);
+}
+.footer-left .small a {
+    text-decoration: none;
+}
+.footer-left .small p {
+    text-decoration: none;
+    margin-top: 0;
 }
 .footer-right{
     vertical-align: bottom;
