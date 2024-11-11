@@ -7,11 +7,18 @@
     <title>Julia Robinek</title>
     <link rel="icon" type="image/svg+xml" href="Logos/Circle-small.svg">
 
-    <link rel="preload" href="menustyles.css" fetchpriority="high" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="menustyles(1).css" fetchpriority="high" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="indexstyles.css" as="style" onload="this.rel='stylesheet'">
 
 </head>
 <body>
+        <!-- Black run-up "page"-->
+    <div>
+        <div id="run-up">
+            <a href="index.html" class="home-icon-run-up">Julia Robinek</a>
+            <div class="home-icon-sign-run-up"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
+        </div>
+    </div>    
         <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
     <header>
         <div class="header-content">
@@ -34,7 +41,7 @@
     
     <!-- Hero Section -->
     <section class="hero">
-        <img src="WebImages/11-2023.jpg" loading="lazy" alt="Hero Image" class="hero-image">
+        <img src="WebImages/11-2023.jpg" alt="Hero Image" class="hero-image">
     </section>
 
     <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
@@ -62,6 +69,20 @@
     <!-- Footer Section End -->
 
       <script>
+        // Add the run-up "page" before the index page comes up
+        document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() { 
+            const runUpDiv = document.getElementById("run-up");
+            runUpDiv.style.transition = "opacity 1.5s";
+            runUpDiv.style.opacity = 0.4;
+
+            // When the opacity transition ends, hide the element completely
+            runUpDiv.addEventListener("transitionend", function() {
+                runUpDiv.style.display = "none";
+            }, { once: true }); // { once: true } ensures this runs only once
+        }, 800);
+        });
+
         // Add the menu on top of every page of the website
         document.addEventListener("DOMContentLoaded", function() {
             fetch('menu.html') // Load the menu.html file
