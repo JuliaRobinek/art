@@ -16,6 +16,15 @@
 
 </head>
 <body>
+
+        <!-- Black run-up "page"-->
+        <div>
+            <div id="run-up">
+                <a href="index.html" class="home-icon-run-up">Julia Robinek</a>
+                <div class="home-icon-sign-run-up"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
+            </div>
+        </div>
+                
         <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
     <header>
         <div class="header-content">
@@ -117,6 +126,21 @@
     <!-- Footer Section End -->
 
       <script>
+
+        // Add the run-up "page" before the index page comes up
+        document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() { 
+            const runUpDiv = document.getElementById("run-up");
+            runUpDiv.style.transition = "opacity 0.3s";
+            runUpDiv.style.opacity = 0.4;
+
+            // When the opacity transition ends, hide the element completely
+            runUpDiv.addEventListener("transitionend", function() {
+                runUpDiv.style.display = "none";
+            }, { once: true }); // { once: true } ensures this runs only once
+        }, 800);
+        });
+
         // Add the menu on top of every page of the website
         document.addEventListener("DOMContentLoaded", function() {
             fetch('menu.html') // Load the menu.html file

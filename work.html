@@ -12,6 +12,15 @@
 
 </head>
 <body>
+
+        <!-- Black run-up "page"-->
+        <div>
+            <div id="run-up">
+                <a href="index.html" class="home-icon-run-up">Julia Robinek</a>
+                <div class="home-icon-sign-run-up"> <img src="Logos/RJlogo-small-white.svg"></img> </div>
+            </div>
+        </div>    
+
         <!-- Header Section Start NEED TO COPY TO EVERY PAGE DUE TO SLOW SERVER-->
     <header>
         <div class="header-content">
@@ -34,19 +43,19 @@
     
     <!-- Hero Section -->
     <h1>work</h1>
-    <div class="gallery">     <!--Start of grid gallery-->
-            <a class="lightbox" href="work2015-2019.html">   <!--executes the container with id "dog1" when clicked on this anchor-->
-                <img src="WebImages/23-2018.jpg" alt="Julia Robinek painting titled Two projections" title="Julia Robinek painting titled Two projections">
-                <h3>Paintings 2015-2019</h3>
-            </a>           
-            <a class="lightbox" href="work2020-2022.html">
-                <img src="WebImages/13-2020.jpg" alt="Julia Robinek painting titled The surface is the great divider " title="Julia Robinek painting titled The surface is the great divider ">
-                <h3>Paintings 2020-2022</h3>
-            </a>           
+    <div class="gallery">     <!--Start of grid gallery-->                   
             <a class="lightbox" href="work2023.html">
                 <img src="WebImages/57-2023.jpg" alt="Julia Robinek painting titled The voice in the head" title="Julia Robinek painting titled The voice in the head">
                 <h3>Paintings 2023-NOW</h3>
-            </a>            
+            </a>    
+            <a class="lightbox" href="work2020-2022.html">
+                <img src="WebImages/13-2020.jpg" alt="Julia Robinek painting titled The surface is the great divider " title="Julia Robinek painting titled The surface is the great divider ">
+                <h3>Paintings 2020-2022</h3>
+            </a>       
+            <a class="lightbox" href="work2015-2019.html">   <!--executes the container with id "dog1" when clicked on this anchor-->
+                <img src="WebImages/23-2018.jpg" alt="Julia Robinek painting titled Two projections" title="Julia Robinek painting titled Two projections">
+                <h3>Paintings 2015-2019</h3>
+            </a>    
     </div>     <!--End of grid gallery-->
 
     <!-- Footer Section Start NEED TO COPY TO EVERY PAGE -->
@@ -74,6 +83,21 @@
     <!-- Footer Section End -->
  
       <script>
+
+        // Add the run-up "page" before the index page comes up
+        document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() { 
+            const runUpDiv = document.getElementById("run-up");
+            runUpDiv.style.transition = "opacity 0.3s";
+            runUpDiv.style.opacity = 0.4;
+
+            // When the opacity transition ends, hide the element completely
+            runUpDiv.addEventListener("transitionend", function() {
+                runUpDiv.style.display = "none";
+            }, { once: true }); // { once: true } ensures this runs only once
+        }, 800);
+        });
+
         // Add the menu on top of every page of the website
         document.addEventListener("DOMContentLoaded", function() {
             fetch('menu.html') // Load the menu.html file
