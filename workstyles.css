@@ -245,6 +245,11 @@ body {
         margin-left: 1em;
         margin-right: 1em;
     }
+        .lightbox-target .pic img {  
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
     .lightbox-target .picnav {
         order: -2;    
         width: 90vw;    
@@ -257,6 +262,8 @@ body {
     .right {
         order: +1;
     }
+    .arrow, .lightbox-close {
+        width: 25px;
 }
 /*Responsive layout for small screens*/
 @media screen and (max-width: 600px) {
