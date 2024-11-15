@@ -261,9 +261,14 @@ body {
     }
     .right {
         order: +1;
+        padding-left: 24px;
     }
-    .arrow, .lightbox-close {
-        width: 25px;
+    .left {
+        padding-right: 25px;
+    }
+    .lightbox-close {
+        padding-right: 12px;
+        padding-left: 12px;
 }
 /*Responsive layout for small screens*/
 @media screen and (max-width: 600px) {
