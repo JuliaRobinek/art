@@ -241,7 +241,7 @@ body {
     }
     .lightbox-target .pic {  /*priorizes the pic box as first with the minus order*/
         order: -1;
-        margin-top: 65px; /*the pic nav takes up 55px on the top, so this only allows the pic 10px under them*/
+        margin-top: 80px; /*the pic nav takes up 55px on the top, so this only allows the pic 25px under them*/
         margin-left: 1em;
         margin-right: 1em;
     }
@@ -261,10 +261,10 @@ body {
     }
     .right {
         order: +1;
-        padding-left: 24px;
+        padding-left: 20px;
     }
     .left {
-        padding-right: 25px;
+        padding-right: 20px;
     }
     .lightbox-close {
         padding-right: 12px;
