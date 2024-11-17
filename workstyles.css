@@ -5,7 +5,7 @@ body {
     background-color: rgb(245, 245, 245);
 }    
 .home-icon-sign{ /*workaround to overwrite the placement of this icon as it disappears in the header when used on the "work" page, i guess the z-index is a mess*/
-    top:-110px;
+    top:-100px;
     left:-40px;
     transform: scale(0.4); /* Shrinks the element */
 }
