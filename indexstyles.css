@@ -1,7 +1,5 @@
 /* Basic styles for the body */
-* {
-    font-size: 16px;
-}
+
 body, html {
     margin: 0;
     padding: 0;
