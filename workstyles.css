@@ -220,10 +220,10 @@ body {
 
 /*Responsive layout for middle-small screens*/
 @media screen and (max-width: 900px) {
-    .w-menu.responsive .dropdown {  /*this part of the header menu is set for every page to highlight which menu-point is displayed on current page*/
+    /*.w-menu.responsive .dropdown { 
         font-weight: 550;
         color: white;
-    }
+    }*/
     h1 {
         padding-top:0em;
     }
