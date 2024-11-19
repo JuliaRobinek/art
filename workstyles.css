@@ -1,5 +1,7 @@
 /*Formatting for all work.html*/
-
+* {
+    font-size: 16px;
+}
 body {
     font-family: raleway, sans-serif;
     background-color: rgb(245, 245, 245);
@@ -176,8 +178,7 @@ body {
     h1 {
         margin-top: 7em;
         margin-bottom: 2em;
-        padding-left:1.5em;
-        margin-right:1.5em;
+        padding-left:2em;
         font-size: 1.1em;
         font-weight: 300;
         color:rgba(0, 0, 0, 60%);
@@ -220,10 +221,10 @@ body {
 
 /*Responsive layout for middle-small screens*/
 @media screen and (max-width: 900px) {
-    /*.w-menu.responsive .dropdown { 
+    .w-menu.responsive .dropdown {  /*this part of the header menu is set for every page to highlight which menu-point is displayed on current page*/
         font-weight: 550;
         color: white;
-    }*/
+    }
     h1 {
         padding-top:0em;
     }
@@ -245,7 +246,7 @@ body {
         margin-left: 1em;
         margin-right: 1em;
     }
-        .lightbox-target .pic img {  
+    .lightbox-target .pic img {  
         max-height: 100%;
         max-width: 100%;
         object-fit: cover;
@@ -269,6 +270,7 @@ body {
     .lightbox-close {
         padding-right: 12px;
         padding-left: 12px;
+}
 }
 /*Responsive layout for small screens*/
 @media screen and (max-width: 600px) {
