@@ -36,7 +36,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 99vw;
+    width: 100vw;
     line-height: 3; /* Line height set to 2 times the font size */
     display: flex;
     justify-content: center;
@@ -126,7 +126,7 @@ footer {
     position: relative;
     bottom: 0em;
     left: 0;
-    width: 99vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
