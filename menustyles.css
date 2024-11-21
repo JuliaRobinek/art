@@ -55,7 +55,7 @@ header {
     display: flex;
     align-items:center;
     justify-content: space-between;
-    width: 99%;
+    width: 100%;
     padding-left: 2em;
     padding-right: 3em;
 }
@@ -134,7 +134,7 @@ footer {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    width: 99%;
+    width: 100%;
     padding-left: 2em;
     padding-right: 3em;
 }
