@@ -107,12 +107,10 @@ body {
         display: inline-block;
         padding: 3px;
       }
-      
       .right {
         transform: rotate(-45deg);
         /*padding-right: 3px;*/
       }
-      
       .left {
         transform: rotate(135deg);
         /*padding-right: 7px;*/
