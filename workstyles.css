@@ -270,10 +270,10 @@ body {
         padding-left: 12px;
     }
     a.lightbox-close:before {
-        height: 45px;
+        height: 40px;
         }    
     a.lightbox-close:after {
-        height: 45px;
+        height: 40px;
         }  
 }
 /*Responsive layout for small screens*/
