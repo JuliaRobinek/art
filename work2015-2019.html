@@ -568,6 +568,332 @@
                 header.classList.add("header-active"); // Add half-transparent gray
             }
         }); 
+          
+    // Add swipe functionality left and right
+    document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================================
+       LIGHTBOX IMAGE NAVIGATION
+       ---------------------------------------------------------
+       Supports:
+       1. Swipe left/right on phones and tablets
+       2. Left/right keyboard arrows on desktop
+       3. Optional visible left/right navigation arrows
+       ========================================================= */
+
+
+    /* =========================================================
+       OPTIONAL VISIBLE ARROWS
+       ---------------------------------------------------------
+       Change this to true if you want the JavaScript to create
+       visible left/right arrows inside the lightbox.
+
+       Since you already have arrows on smaller screens,
+       I recommend leaving this as FALSE.
+       ========================================================= */
+
+    const SHOW_NAVIGATION_ARROWS = false;
+
+
+    /* =========================================================
+       GET ALL PAINTINGS
+       ---------------------------------------------------------
+       These are the links in your gallery:
+
+       <a class="lightbox" href="#dog1">
+       <a class="lightbox" href="#dog2">
+       etc.
+
+       Their order determines the swipe/navigation order.
+       ========================================================= */
+
+    const galleryLinks = Array.from(
+        document.querySelectorAll(".gallery a.lightbox")
+    );
+
+
+    /* =========================================================
+       TOUCH / SWIPE VARIABLES
+       ========================================================= */
+
+    let startX = 0;
+    let startY = 0;
+
+
+    /* =========================================================
+       FIND THE CURRENT PAINTING
+       ========================================================= */
+
+    function getCurrentIndex() {
+
+        const currentLightbox =
+            document.querySelector(".lightbox-target:target");
+
+        if (!currentLightbox) {
+            return -1;
+        }
+
+        const currentHash = "#" + currentLightbox.id;
+
+        return galleryLinks.findIndex(function (link) {
+            return link.getAttribute("href") === currentHash;
+        });
+    }
+
+
+    /* =========================================================
+       OPEN A PAINTING
+       ========================================================= */
+
+    function openPainting(index) {
+
+        if (index < 0 || index >= galleryLinks.length) {
+            return;
+        }
+
+        const destination =
+            galleryLinks[index].getAttribute("href");
+
+        window.location.hash = destination;
+    }
+
+
+    /* =========================================================
+       GO TO NEXT PAINTING
+       ---------------------------------------------------------
+       When the last painting is reached, it goes back to the
+       first painting.
+       ========================================================= */
+
+    function nextPainting() {
+
+        const currentIndex = getCurrentIndex();
+
+        if (currentIndex === -1) {
+            return;
+        }
+
+        let nextIndex = currentIndex + 1;
+
+        if (nextIndex >= galleryLinks.length) {
+            nextIndex = 0;
+        }
+
+        openPainting(nextIndex);
+    }
+
+
+    /* =========================================================
+       GO TO PREVIOUS PAINTING
+       ---------------------------------------------------------
+       When the first painting is reached, it goes to the
+       last painting.
+       ========================================================= */
+
+    function previousPainting() {
+
+        const currentIndex = getCurrentIndex();
+
+        if (currentIndex === -1) {
+            return;
+        }
+
+        let previousIndex = currentIndex - 1;
+
+        if (previousIndex < 0) {
+            previousIndex = galleryLinks.length - 1;
+        }
+
+        openPainting(previousIndex);
+    }
+
+
+    /* =========================================================
+       SWIPE DETECTION
+       ========================================================= */
+
+    document.addEventListener(
+        "touchstart",
+        function (event) {
+
+            // Only activate when a lightbox is open
+            if (!document.querySelector(".lightbox-target:target")) {
+                return;
+            }
+
+            startX = event.touches[0].clientX;
+            startY = event.touches[0].clientY;
+
+        },
+        { passive: true }
+    );
+
+
+    document.addEventListener(
+        "touchend",
+        function (event) {
+
+            // Only activate when a lightbox is open
+            if (!document.querySelector(".lightbox-target:target")) {
+                return;
+            }
+
+            const endX = event.changedTouches[0].clientX;
+            const endY = event.changedTouches[0].clientY;
+
+            const differenceX = endX - startX;
+            const differenceY = endY - startY;
+
+
+            /* -------------------------------------------------
+               Ignore:
+               - very small finger movements
+               - predominantly vertical movements
+
+               This prevents normal scrolling from changing
+               the painting.
+               ------------------------------------------------- */
+
+            if (Math.abs(differenceX) < 50) {
+                return;
+            }
+
+            if (Math.abs(differenceX) < Math.abs(differenceY)) {
+                return;
+            }
+
+
+            /* -------------------------------------------------
+               Swipe LEFT = NEXT painting
+               Swipe RIGHT = PREVIOUS painting
+               ------------------------------------------------- */
+
+            if (differenceX < 0) {
+                nextPainting();
+            } else {
+                previousPainting();
+            }
+
+        },
+        { passive: true }
+    );
+
+
+    /* =========================================================
+       KEYBOARD NAVIGATION
+       ---------------------------------------------------------
+       LEFT ARROW  = previous painting
+       RIGHT ARROW = next painting
+       ESC          = close lightbox
+       ========================================================= */
+
+    document.addEventListener("keydown", function (event) {
+
+        // Don't do anything if no lightbox is open
+        if (!document.querySelector(".lightbox-target:target")) {
+            return;
+        }
+
+
+        if (event.key === "ArrowLeft") {
+
+            event.preventDefault();
+            previousPainting();
+
+        }
+
+
+        else if (event.key === "ArrowRight") {
+
+            event.preventDefault();
+            nextPainting();
+
+        }
+
+
+        else if (event.key === "Escape") {
+
+            /*
+             * Remove the hash to close the lightbox.
+             *
+             * This uses history.replaceState so that pressing
+             * Escape doesn't create another browser-history step.
+             */
+
+            history.replaceState(
+                null,
+                "",
+                window.location.pathname +
+                window.location.search
+            );
+
+        }
+
+    });
+
+
+    /* =========================================================
+       OPTIONAL VISIBLE LEFT / RIGHT ARROWS
+       ---------------------------------------------------------
+       THIS IS THE PART YOU CAN IGNORE FOR NOW.
+
+       Because SHOW_NAVIGATION_ARROWS is FALSE above, this
+       section will NOT create any new arrows.
+
+       If you later change:
+
+           const SHOW_NAVIGATION_ARROWS = true;
+
+       the JavaScript will create arrows automatically.
+       ========================================================= */
+
+    if (SHOW_NAVIGATION_ARROWS) {
+
+        const previousButton = document.createElement("button");
+        const nextButton = document.createElement("button");
+
+
+        /* ---------- Previous button ---------- */
+
+        previousButton.className = "lightbox-navigation previous";
+        previousButton.setAttribute(
+            "aria-label",
+            "Previous painting"
+        );
+        previousButton.innerHTML = "&#10094;";
+
+
+        /* ---------- Next button ---------- */
+
+        nextButton.className = "lightbox-navigation next";
+        nextButton.setAttribute(
+            "aria-label",
+            "Next painting"
+        );
+        nextButton.innerHTML = "&#10095;";
+
+
+        /* ---------- Add buttons to page ---------- */
+
+        document.body.appendChild(previousButton);
+        document.body.appendChild(nextButton);
+
+
+        /* ---------- Button actions ---------- */
+
+        previousButton.addEventListener(
+            "click",
+            previousPainting
+        );
+
+        nextButton.addEventListener(
+            "click",
+            nextPainting
+        );
+
+    }
+
+});
     </script>
       
 </body>
